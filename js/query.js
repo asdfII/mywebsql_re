@@ -50,6 +50,11 @@ function queryGo(type) {
 		jAlert(__("Please type in one or more queries in the sql editor!"), __("Execute query"), function() { focusEditor(); });
 		return;
 	}
+	
+	if (!$.trim(strQuery).match("select")) {
+		jAlert(__("Query is forbidden! Only can use SELECT! (By Alpha[weshare])"), __("Execute query"), function() { focusEditor(); });
+		return;
+	}
 	querySaveCache(strQuery);
 
 	if (type == 1) {
@@ -447,10 +452,6 @@ function resultSelectAll() {
 
 function getSqlCode() {
 	ed = currentEditor();
-	// Restrict SQL query by Alpha[weshare]
-	//~ if (ed.getCode() == "show databases;")
-		//~ alert("Noooooooooooooooooooooooooooooooo!!");
-		//~ break
 	return ed.getCode();
 }
 

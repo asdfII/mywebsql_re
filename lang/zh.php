@@ -429,6 +429,7 @@
 		'Previous' => "上一页",
 		'Procedures' => "程序",
 		'Prompt' => "提示",
+		'Query is forbidden! Only can use SELECT! (By Alpha[weshare])' => "禁止非SELECT以外的命令! (By Alpha[weshare])",
 		'Refresh results' => "刷新结果",
 		'Refreshing object list' => "刷新对象列表",
 		'Rename Object' => "重命名对象",

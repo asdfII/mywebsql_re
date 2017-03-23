@@ -32,29 +32,5 @@
 	// sqlite is not recommended here, in order to avoid possible file system attacks
 	$ALLOW_CUSTOM_SERVER_TYPES = "mysql,pgsql";
 
-	$SERVER_LIST = array(
-		'Localhost MySQL'           => array(
-		                             'host'     => 'localhost',
-		                             'driver'   => extension_loaded('mysqli') ? 'mysqli' : 'mysql5'
-		                         ),
-		'SQLite Databases'          => array(
-		                             'host'     => 'c:/sqlitedb/',
-		                             'driver'   => 'sqlite3',
-		                             'user'     => 'root',    // set this yourself
-		                             'password' => 'sqlite'  // set this yourself
-		                         ),
- 		'Localhost PostgreSQL'     => array(
-		                             'host'     => 'localhost',
-		                             'driver'   => 'pgsql'
-		                         ),
-		/*'MySQL Proxy Server'  => array(
-		                             'host'     => 'localhost:4040',
-		                             'driver'   => 'mysql5'
-		                         ),
-		'MySQL 4'             => array(
-		                             'host'     => 'localhost',
-		                             'driver'   => 'mysql4'
-		                         ),
-		*/
-	);
+	include(BASE_PATH . '/config/weshare.php');
 ?>

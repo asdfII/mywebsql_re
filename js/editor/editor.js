@@ -548,8 +548,10 @@ var Editor = (function(){
       if (webkit && this.container.lastChild.hackBR)
         accum.pop();
       webkitLastLineHack(this.container);
-      if (accum[0] == "show ")
-	//~ alert("Now you are using SHOW...");
+      if (!accum[0].match("select")) {
+	accum = [accum[0]];
+	//~ console.log(accum[0] + " is forbidden.");
+      }
       return cleanText(accum.join(""));
     },
 
