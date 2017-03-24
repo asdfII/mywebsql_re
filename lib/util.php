@@ -119,6 +119,8 @@
 		Session::del('select', 'unique_table');  // this is different from the one used for viewing table data
 
 		$record_limit = Options::get('res-max-count', MAX_RECORD_TO_DISPLAY);
+		if ($record_limit > 50)
+			{ $record_limit = 50; }
 		// <form element is moved to js, see comments there
 		print "<div id='results'>";
 		print "<table cellspacing=\"0\" width='100%' border=\"0\" class='results' id=\"dataTable\"><thead>\n";

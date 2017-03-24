@@ -428,7 +428,7 @@
 		'Previous' => "Previous",
 		'Procedures' => "Procedures",
 		'Prompt' => "Prompt",
-		'Query is forbidden! Only can use SELECT! (By Alpha[weshare])' => "Query is forbidden! Only can use SELECT! (By Alpha[weshare])",
+		'Query is forbidden! Only can use SELECT! (Revised by Weshare])' => "Query is forbidden! Only can use SELECT! (Revised by Weshare)",
 		'Refresh results' => "Refresh results",
 		'Refreshing object list' => "Refreshing object list",
 		'Rename Object' => "Rename Object",

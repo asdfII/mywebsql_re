@@ -52,7 +52,7 @@ function queryGo(type) {
 	}
 	
 	if (!$.trim(strQuery).match("select")) {
-		jAlert(__("Query is forbidden! Only can use SELECT! (By Alpha[weshare])"), __("Execute query"), function() { focusEditor(); });
+		jAlert(__("Query is forbidden! Only can use SELECT! (Revised by Weshare)"), __("Execute query"), function() { focusEditor(); });
 		return;
 	}
 	querySaveCache(strQuery);

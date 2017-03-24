@@ -49,6 +49,8 @@
 	function selectFromTable(&$db) {
 		$query = '';
 		$record_limit = Options::get('res-max-count', MAX_RECORD_TO_DISPLAY);
+		if ($record_limit > 50)
+			{ $record_limit = 50; }
 
 		$page = v($_REQUEST['name']);
 		if ($page) {  // subsequent page requests from a table
@@ -142,6 +144,8 @@
 		// only either sort or pagination request can come at a time
 		if( !$query_type['has_limit'] && v($_REQUEST["id"]) != 'sort' ) {
 			$record_limit = Options::get('res-max-count', MAX_RECORD_TO_DISPLAY);
+			if ($record_limit > 50)
+				{ $record_limit = 50; }
 			$page = v($_REQUEST['name']);
 
 			if ( $page ) {
