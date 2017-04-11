@@ -336,19 +336,7 @@ function transferResultGrid(num, tm, msg) {
 		
 
 
-	if (totalPages > 1) {
-		str = __('Results page:') + '&nbsp;';
-		str += (1==currentPage) ? '<span class="page">' + __('Previous') + '</span>' : '<a href="javascript:goPage('+(currentPage-1)+')">' + __('Previous') + '</a>';
-		str += '<select id="page_selector" name="page" onchange="javascript:goPage(this.value)">';
-		for(i=1; i<=totalPages; i++)
-			str += (i==currentPage) ? '<option selected="selected" value="'+i+'">'+i+'</option>' : '<option value="'+i+'">'+i+'</option>';
-		str += '</select>';
-		str += (totalPages==currentPage) ? '<span class="page">' + __('Next') + '</span>' : '<a href="javascript:goPage('+(currentPage+1)+')">' + __('Next') + '</a>';
-		$('#pagingContainer').html(str);
-	}
-	else
-		$('#pagingContainer').html('');
-
+	$('#pagingContainer').html('');
 	setPageStatus(false);
 	editTableName == "" ? showNavBtns('query', 'queryall') : showNavBtns('addrec', 'query', 'queryall');
 		
