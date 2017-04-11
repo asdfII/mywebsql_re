@@ -364,6 +364,8 @@
 		'Exclude Table Character set' => "排除表字符集",
 		'Backup filename' => "备份文件名",
 		'Invalid filename format' => "无效的文件名格式",
+		'Powered by Weshare' => "掌众金融",
+		'ZZWebSQL' => "掌众WebSQL",
 
 	);
 	
