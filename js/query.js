@@ -51,7 +51,7 @@ function queryGo(type) {
 		return;
 	}
 	
-	if (!$.trim(strQuery).match("select")) {
+	if (!$.trim(strQuery).match("select|SELECT")) {
 		jAlert(__("Query is forbidden! Only can use SELECT! (Revised by Weshare)"), __("Execute query"), function() { focusEditor(); });
 		return;
 	}

@@ -5,7 +5,7 @@
  * @file:      modules/query.php
  * @author     Samnan ur Rehman
  * @copyright  (c) 2008-2014 Samnan ur Rehman
- * @web        http://mywebsql.net
+ * @web		http://mywebsql.net
  * @license    http://mywebsql.net/license
  */
 
@@ -103,6 +103,29 @@
 
 	function simpleQuery(&$db) {
 		$query = v($_REQUEST["query"]);
+
+		$log_file = BASE_PATH . "/dbquery.log";
+		$fp = fopen($log_file, 'a+');
+		if (flock($fp, LOCK_EX)) {
+			//ftruncate($fp, 0);
+			date_default_timezone_set('Asia/Shanghai');
+			fwrite(
+				$fp,
+				"["
+				. date("Y-m-d H:i:s")
+				. "]\t"
+				. htmlspecialchars(Session::get('db', 'user', true))
+				. "\t"
+				. htmlspecialchars(Session::get('auth', 'server_name', true))
+				. "\t$query\n"
+			);
+			fflush($fp);
+			flock($fp, LOCK_UN);
+		} else {
+			echo "Couldn't get the lock!";
+		}
+		fclose($fp);
+
 		if (!$query)
 			$query = Session::get('select', 'query');  // try to load from session
 
