@@ -87,7 +87,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset='utf-8';" />
-<title>MyWebSQL -- Revised by Weshare</title>
+<title>ZZWebSQL -- Powered by Weshare</title>
 	<link rel="stylesheet" type="text/css" href="cache.php?css=theme,default" />
 	<link rel="SHORTCUT ICON" href="favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="cache.php?css=menu,treeview,results,context,alerts" />
@@ -122,10 +122,10 @@
 
 	<div class="ui-layout-north">
 		<div id="main_header">
-			<a target="_blank" href="<?php echo PROJECT_SITEURL;?>"><img src="img/logo.png" class="logo" alt="MyWebSQL" width="45" height="38" border="0" /></a>
+			<a onclick="return false;" target="_blank" href="<?php //echo PROJECT_SITEURL;?>"><img src="img/logo.png" class="logo" alt="MyWebSQL" width="45" height="38" border="0" /></a>
 			<div class="title">
-				<div class="main"><i><b>MyWebSQL</b></i></div>
-				<div class="version"><i><b><?php echo __('Revised by Weshare'); ?></b></i></div>
+				<div class="main"><i><b><?php echo __('ZZWebSQL'); ?></b></i></div>
+				<div class="version"><i><b><?php echo __('Powered by Weshare'); ?></b></i></div>
 			</div>
 			<div class="info">
 				<span class="server"><?php echo htmlspecialchars(Session::get('auth', 'server_name', true)); ?></span> - <?php echo htmlspecialchars(Session::get('db', 'version_comment')); ?>&nbsp;<?php echo htmlspecialchars(Session::get('db', 'version_full')); ?><br />
@@ -236,7 +236,7 @@
 <div id="screen-wait" class="ui-widget-overlay">
 	<div><span><?php echo __('Loading'); ?>...</span><img src="themes/<?php echo THEME_PATH; ?>/images/loading.gif" alt="" /></div>
 	<div class="compat-notice" style="display:none;margin:200px auto;width:530px;color: #222222;font-family:segoe ui;font-size:13pt;font-weight:bold">
-		<?php echo __('Your browser appears to be very old and does not support all features required to run MyWebSQL.'); ?><br /><br />
+		<?php echo __('Your browser appears to be very old and does not support all features required to run it.'); ?><br /><br />
 		<?php echo __('Try using a newer version of the browser to run this application.'); ?>
 	</div>
 </div>

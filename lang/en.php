@@ -363,6 +363,8 @@
 		'Exclude Table Character set' => "Exclude Table Character set",
 		'Backup filename' => "Backup filename",
 		'Invalid filename format' => "Invalid filename format",
+		'Powered by Weshare' => "Powered by Weshare",
+		'ZZWebSQL' => "ZZWebSQL",
 
 	);
 	

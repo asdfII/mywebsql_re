@@ -129,7 +129,6 @@ div.msg {
 			<div id="bg">
 			<div id="splash">
 				<span class="version"><?php echo __('version'); ?> {{APP_VERSION}}</span>
-				<span class="website"><a target="_blank" href="{{PROJECT_SITEURL}}" title="<?php echo __('Visit Project website'); ?>"><?php echo __('Visit Project website'); ?></a></span>
 				{{MESSAGE}}
 				{{FORM}}
 			</div>

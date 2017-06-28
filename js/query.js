@@ -51,7 +51,7 @@ function queryGo(type) {
 		return;
 	}
 	
-	if (!$.trim(strQuery).match("select")) {
+	if (!$.trim(strQuery).match("select|SELECT")) {
 		jAlert(__("Query is forbidden! Only can use SELECT! (Revised by Weshare)"), __("Execute query"), function() { focusEditor(); });
 		return;
 	}
@@ -335,7 +335,7 @@ function transferResultGrid(num, tm, msg) {
 	$("#results-div").prop("scrollTop", 0).prop("scrollLeft", 0);
 		
 
-
+/*
 	if (totalPages > 1) {
 		str = __('Results page:') + '&nbsp;';
 		str += (1==currentPage) ? '<span class="page">' + __('Previous') + '</span>' : '<a href="javascript:goPage('+(currentPage-1)+')">' + __('Previous') + '</a>';
@@ -348,6 +348,8 @@ function transferResultGrid(num, tm, msg) {
 	}
 	else
 		$('#pagingContainer').html('');
+*/
+	$('#pagingContainer').html('');
 
 	setPageStatus(false);
 	editTableName == "" ? showNavBtns('query', 'queryall') : showNavBtns('addrec', 'query', 'queryall');
